@@ -21,3 +21,12 @@ function duplicateCount(text){
   
   return counting
 }
+
+/*
+  This function converts text to an array and loops through the array, 
+  then checks if "obj" has the character.
+  If it does, adds one to the character's value.
+  If it doesn't, creates a property named after the character with a value of one.
+  Then it returns how many properties have a value greater than one.
+  
+*/
