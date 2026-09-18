@@ -1,0 +1,23 @@
+// Codewars - Duplicate Count
+// 6 kyu
+
+function duplicateCount(text){
+  text = [...text]
+  const obj = {}
+  
+  text.forEach(char => {
+    char = char.toLowerCase()
+    const isInclude = char in obj
+    isInclude 
+      ? obj[char] += 1
+      : obj[char] = 1
+  })
+  
+  const resultArray = Object.entries(obj)
+  let counting = 0
+  resultArray.forEach(arr => {
+    if (arr[1] > 1) counting++
+  })
+  
+  return counting
+}
