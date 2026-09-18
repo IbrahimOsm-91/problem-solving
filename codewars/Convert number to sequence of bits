@@ -1,0 +1,16 @@
+// extend all numbers with toBits()
+Number.prototype.toBits = function(length) {
+  const bits = this.toString(2)
+  
+  if (length === undefined) {
+    const num = 8 - bits.length 
+    return num >= 0
+      ? '0'.repeat(num) + bits
+      : bits
+  }
+
+  const num = length - bits.length
+    return num >= 0
+      ? '0'.repeat(num) + bits
+      : bits
+};
