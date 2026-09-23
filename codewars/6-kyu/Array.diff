@@ -1,0 +1,9 @@
+// Codewars - Array Difference
+// 6 kyu
+
+function arrayDiff(a, b) {
+  const result = a.filter(element => !b.includes(element))
+  return result
+}
+
+// Removes elements that exist in the b array
