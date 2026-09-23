@@ -1,0 +1,12 @@
+// Codewars - Create Phone Number
+// 6 kyu
+
+function createPhoneNumber(nums){
+  const head = nums.slice(0, 3).join('')
+  const body = nums.slice(3, 6).join('')
+  const bottom = nums.slice(6).join('')
+  const result = `(${head}) ${body}-${bottom}`
+  return result
+}
+
+// Divide the numbers array, converts each part to a string and combine them
