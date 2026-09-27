@@ -1,0 +1,20 @@
+CodeWars - 7kyu
+
+function isIsogram(str){
+  let isValid = true
+  
+  const stringArr = [...str.toLowerCase()]
+  const checkedCharacters = []
+  
+  for (const item of stringArr) {
+    if (!isValid) break
+    
+    checkedCharacters.includes(item)
+      ? isValid = false
+      : checkedCharacters.push(item)
+  }
+  return isValid
+}
+
+// Converts the string to an array, then loops through the array.
+// If a character appears more than once, isValid is set to false.
