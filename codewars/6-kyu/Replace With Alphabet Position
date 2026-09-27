@@ -1,0 +1,19 @@
+// CodeWars - 6kyu
+
+function alphabetPosition(text) {
+  text = [...text.toUpperCase()]
+  const resultArray = []
+  
+  text.forEach(letter => {
+    const num = letter.charCodeAt(0) - 64
+    
+    if (num >= 1 && num <= 26) {
+      resultArray.push(num)
+    }
+  })
+  
+  return (resultArray.join(" "))
+}
+
+// Spread the text into an array, then find the character code for each character and calculate its position in the alphabet. 
+// Finnaly, check if the character is  a valid letter and add its position to the result
