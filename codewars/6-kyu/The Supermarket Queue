@@ -1,0 +1,15 @@
+function queueTime(customers, n) {
+  
+  const tills = Array(n).fill(0)
+  
+  customers.forEach(customer => {
+    const minTime = Math.min(...tills)
+    const minIndex = tills.findIndex(time => time === minTime)
+    tills[minIndex] += customer
+  })
+  return Math.max(...tills)
+}
+
+// "n" represents the number of tills and "customers" is an array of checkout times.
+// First, create the tills, then find the till with the shortest remaining time and assign the customer to it.
+// Finally, return the till with the total longest time.
