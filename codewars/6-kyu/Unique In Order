@@ -1,0 +1,8 @@
+// CodeWars - 6kyu
+
+var uniqueInOrder=function(iterable){  
+  return [...iterable].filter((item, index) => iterable[index - 1] !== item)
+}
+
+
+// Remove consecutive duplicate items
